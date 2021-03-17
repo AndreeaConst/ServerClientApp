@@ -1,0 +1,29 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "PersonClient";
+import "google/protobuf/empty.proto";
+
+service PersonRegistration {
+	rpc AddPerson(AddPersonRequest) returns (AddPersonResponse);
+	rpc PrintPeopleStream(google.protobuf.Empty) returns (google.protobuf.Empty);
+}
+
+message AddPersonRequest{
+	Person person = 1;
+}
+
+message AddPersonResponse{
+	Status status = 1;	
+
+	enum Status{
+		SUCCESS = 0;
+		ERROR = 1;
+	}
+}
+
+message Person {
+	string name = 1;
+	string gender = 2;
+	int32 age = 3;
+	string ID = 4;
+}
