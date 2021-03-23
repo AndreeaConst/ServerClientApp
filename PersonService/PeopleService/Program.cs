@@ -11,27 +11,6 @@ namespace   PersonService
 {
     public class Program
     {
-
-
-        //const int Port = 5001;
-
-        //public static void Main(string[] args)
-        //{
-        //    Server server = new Server
-        //    {
-        //        Services = { Bookstore.BindService(new Services.BookService()) },
-        //        Ports = { new ServerPort("localhost", Port, ServerCredentials.Insecure) }
-        //    };
-        //    server.Start();
-
-        //    Console.WriteLine("Bookstore server listening on port " + Port);
-        //    Console.WriteLine("Press any key to stop the server...");
-        //    Console.ReadKey();
-
-        //    server.ShutdownAsync().Wait();
-        //}
-
-
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();
